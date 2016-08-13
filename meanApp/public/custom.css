@@ -1,0 +1,105 @@
+* {padding:0px;margin:0px;}
+.header {
+	float: left;
+	width: 100%;
+	height: 60px;
+	background-color: gray;
+}
+.header .nav > ul {
+	display: block;
+	list-style: none;
+	padding: 0px;
+    margin: 0px;
+    width: 50%;
+    height: 60px;
+    float: right;
+}
+/* .header .nav > topUL ul {list-style: none;background:gray;width: 100%;}
+.header .nav > topUL > li {float:left;line-height:60px;background:gray;}
+.header .nav > topUL > li a {text-decoration:none;color:white;font-family:sans-serif;height:60px;display:block;padding-left:5px;padding-right:5px;}
+.header .nav .topUL  ul li{position:relative;border-bottom:1px solid;width:100%;}
+.header .nav .topUL  ul {display:none;}
+.header .nav .topUL li:hover > ul {display:block;transition:width 2s;}
+.header .nav .topUL li:hover {background:cyan;}
+.header .nav .topUL ul ul {position:absolute;top:0px;left:100%;} */
+
+.header .nav  > ul ul {list-style: none;background:gray;width: 100%;}
+.header .nav  > ul > li {float:left;line-height:60px;background:gray;}
+.header .nav  > ul > li a {text-decoration:none;color:white;font-family:sans-serif;height:60px;display:block;padding-left:5px;padding-right:5px;}
+.header .nav  > ul  ul li{position:relative;border-bottom:1px solid;width:100%;}
+.header .nav  > ul  ul {display:none;}
+.header .nav  > ul li:hover > ul {display:block;transition:width 2s;}
+.header .nav  > ul li:hover {background:cyan;}
+.header .nav  > ul ul ul {position:absolute;top:0px;left:100%;}
+
+
+#i-nav {
+	display: none;
+	position: absolute;
+	top: 15px;
+	left: 30px;
+	height: 30px;
+	width: 30px;
+	background-color: black;
+}
+
+/*.header .nav .topUL li a {
+	text-decoration: none;
+	line-height: 60px;
+	padding: 0px 10px;
+	font-family: sans-serif;
+	color: white;
+	display: block;
+}*/
+/*.header .nav .topUL li ul li:hover {background:#99ff99;}
+.header .nav .topUL li ul li a{text-decoration: none;
+		line-height: 60px;
+		padding: 0px 10px;
+		font-family: sans-serif;
+		color: white;
+		display: block;
+}
+.header .nav .topUL li ul li {background:green;display: block;margin-right: 5px;float: left;height: 60px;width:100%;border-bottom:1px solid;}
+.header .nav .topUL li ul {display:none;background:green;position:absolute;padding:0px;margin:0px;}
+.header .nav .topUL li:hover {background:#99ff99;}
+.header .nav .topUL li:hover ul{display:block;}
+
+3rd layer css 
+.header .nav .topUL .firstLink ul li ul {display:none;position: relative;top: -61px;left: 115px;}
+.header .nav .topUL .firstLink ul li ul li {width:100%;border-bottom:1px solid;display:block;}
+.header .nav .topUL .firstLink ul li:hover ul {display:block;} 
+*/
+h1 {
+	float: left;
+    line-height: 60px;
+    margin-left: 20px;
+}
+.show .header .nav{
+	transform: translateX(0px);
+}
+@media (max-width: 1024px) {
+	#i-nav {
+		display: block;
+	}
+
+	header {
+		width: 100%;
+		height: 60px;
+	}
+	
+	h1 {width:100%;text-align:center;}
+	.nav {
+		background: green;
+		position: fixed;
+		top: 60px;
+		bottom:0px;
+		width: 200px;
+		z-index:1000;
+		transform: translateX(-250px);
+		transition:transform 1s ease;
+	}
+	.header .nav > ul li {background:transparent;width:200px;position:relative;top:0px;right:0px;float:left;height:40px;line-height:40px;border-bottom:1px solid;}
+	.header .nav > ul {float: left;}
+	.header .nav > ul ul {position:absolute;top:0px;left:100%;background: green;}
+	
+}

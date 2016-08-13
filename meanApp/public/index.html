@@ -1,0 +1,103 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+	<head>
+		<title>Navigation Demo App..</title>
+		 <script src="https://code.angularjs.org/1.2.0/angular.min.js"></script>
+		 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+		 <script src="http://code.jquery.com/jquery.min.js"></script>
+ 		 <link href="custom.css" rel="stylesheet" type="text/css" />
+         <script src="custom.js"></script>
+		 <script src="botstrap.js"></script>
+		 <script src="controller.js"></script>
+	</head>
+    <body>
+        <header class="header">
+            <h1>Logo</h1>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a ui-sref="#">link1 button 1</a>
+						<ul>
+							<li>
+								<a ui-sref="home">Home</a>
+							</li>
+							<li>
+								<a ui-sref="#">Sub link 2</a>
+							</li>
+							<li>
+								<a ui-sref="#">Sub link 3</a>
+								<ul>
+									<li>
+										<a ui-sref="#">Sub link 1</a>
+									</li>
+									<li>
+										<a ui-sref="#">Sub link 2</a>
+										
+									</li>
+									<li>
+										<a ui-sref="#">Sub link 3</a>
+										<ul>
+									<li>
+										<a ui-sref="#">Sub link 1</a>
+									</li>
+									<li>
+										<a ui-sref="#">Sub link 2</a>
+										
+									</li>
+									<li>
+										<a ui-sref="#">Sub link 3</a>
+									</li>
+								</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+                    </li>
+                    <li>
+                        <a ui-sref="home">Home</a>
+                    </li> 
+                    <li>
+                        <a ui-sref="#">link3 button 1</a>
+                    </li> 
+                    <li>
+                        <a ui-sref="#">link4 button 1</a>
+						
+                    </li>
+                    <li>
+                        <a ui-sref="#">link5 button 1</a>
+						<ul>
+									<li>
+										<a ui-sref="#">Sub link 1</a>
+									</li>
+									<li>
+										<a ui-sref="#">Sub link 2</a>
+										
+									</li>
+									<li>
+										<a ui-sref="#">Sub link 3</a>
+										<ul>
+									<li>
+										<a s-ref="#">Sub link 1</a>
+									</li>
+									<li>
+										<a ui-sref="#">Sub link 2</a>
+										
+									</li>
+									<li>
+										<a ui-sref="#">Sub link 3</a>
+									</li>
+								</ul>
+									</li>
+								</ul>
+                    </li>  
+                </ul>
+            </nav>
+            <a id="i-nav" href="#"><a>
+        </header>
+        <div class="container">
+        	<div ui-view></div>
+        </div>
+        
+        
+    </body>
+</html>

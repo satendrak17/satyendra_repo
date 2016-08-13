@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html ng-app="myApp2">
+	<head>
+		<title>Mean Demo App..</title>
+		 <script src="https://code.angularjs.org/1.2.0/angular.min.js"></script>
+		 <script src="http://code.jquery.com/jquery.min.js"></script>
+ 		 <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+ 		 <script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+ 		 <link href="custom.css" rel="stylesheet" type="text/css" />
+		 <script src="botstrap.js"></script>
+		 <script src="controller.js"></script>
+	</head>
+<body data-ng-controller="MeanCtrl">
+
+
+<ul class="navigation">
+    <li class="nav-item"><a href="#">Home</a></li>
+    <li class="nav-item"><a href="#">Portfolio</a></li>
+    <li class="nav-item"><a href="#">About</a>
+    	<ul  class="sublinksHide">
+    		<li><a href="#"> Sub Link</a></li>
+    	</ul>
+    </li>
+    <li class="nav-item"><a href="#">Blog</a>
+    	<ul  class="sublinksHide">
+    		<li><a href="#"> Sub Link for Blog</a></li>
+    	</ul>
+    </li>
+    <li class="nav-item"><a href="#">Contact</a></li>
+</ul>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+
+<div class="site-wrap">
+    
+</div>
+<script>
+	$(document).ready(function () {
+		$('li a').click(function(evt) {
+			var hasClassLen = $('.sublinksShow').length;
+			console.log('hasClassLen', hasClassLen);
+			if(hasClassLen > 0) {
+				if($(evt.target.parentElement.children[1]).hasClass('sublinksShow')) {
+					$(evt.target.parentElement.children[1]).removeClass('sublinksShow');
+					$(evt.target.parentElement.children[1]).addClass('sublinksHide');
+				} else {
+					$('li').children().removeClass('sublinksShow');
+					$('li').children().addClass('sublinksHide');
+				$(evt.target.parentElement.children[1]).addClass('sublinksShow');
+			}
+			} else if($(evt.target.parentElement.children[1]).hasClass('sublinksHide')) {
+				$(evt.target.parentElement.children[1]).addClass('sublinksShow');
+				$(evt.target.parentElement.children[1]).removeClass('sublinksHide')
+			}
+		});
+
+		$('.site-wrap').click(function () {
+			console.log("site-wrap clicked");
+			// body...
+			var checked = $('.nav-trigger').is(':checked');
+			if(checked) {
+				$('.navigation, .nav-trigger:checked + label').css({
+
+					"left": "-220px"
+    				
+				});
+			}
+			console.log('checked', checked);
+		});
+
+	});
+</script>
+	
+</body>
+
+</html>
