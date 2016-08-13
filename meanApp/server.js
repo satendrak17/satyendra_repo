@@ -14,7 +14,6 @@ app.get('/data',function(req, res) {
 		console.log("data", data);
 		console.log("err", err);
 	});
-	//console.log("data from db--", data);
 });
 
 
